@@ -280,7 +280,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final Keyword cTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTypeEStringParserRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
+		private final RuleCall cTypeJOINTTYPETerminalRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cOriginKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cOriginAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
@@ -323,7 +323,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//    'Joint'
 		//    '{'
 		//        'name' name=EString
-		//        'type' type=EString
+		//        'type' type=JOINTTYPE
 		//        ('origin' origin=Pose)?
 		//        'parent' parent=[Link|EString]
 		//        'child' child=[Link|EString]
@@ -339,7 +339,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'Joint'
 		//'{'
 		//    'name' name=EString
-		//    'type' type=EString
+		//    'type' type=JOINTTYPE
 		//    ('origin' origin=Pose)?
 		//    'parent' parent=[Link|EString]
 		//    'child' child=[Link|EString]
@@ -370,11 +370,11 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		//'type'
 		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
 		
-		//type=EString
+		//type=JOINTTYPE
 		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
 		
-		//EString
-		public RuleCall getTypeEStringParserRuleCall_5_0() { return cTypeEStringParserRuleCall_5_0; }
+		//JOINTTYPE
+		public RuleCall getTypeJOINTTYPETerminalRuleCall_5_0() { return cTypeJOINTTYPETerminalRuleCall_5_0; }
 		
 		//('origin' origin=Pose)?
 		public Group getGroup_6() { return cGroup_6; }
@@ -3143,6 +3143,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	private final TerminalRule tBOOLEAN;
 	private final TerminalRule tDOUBLE;
 	private final TerminalRule tDECINT;
+	private final TerminalRule tJOINTTYPE;
 	private final Double0Elements pDouble0;
 	private final Integer0Elements pInteger0;
 	
@@ -3192,6 +3193,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 		this.tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.ipa.kinematics.Kinematics.BOOLEAN");
 		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.ipa.kinematics.Kinematics.DOUBLE");
 		this.tDECINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.ipa.kinematics.Kinematics.DECINT");
+		this.tJOINTTYPE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "de.fraunhofer.ipa.kinematics.Kinematics.JOINTTYPE");
 		this.pDouble0 = new Double0Elements();
 		this.pInteger0 = new Integer0Elements();
 	}
@@ -3255,7 +3257,7 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//    'Joint'
 	//    '{'
 	//        'name' name=EString
-	//        'type' type=EString
+	//        'type' type=JOINTTYPE
 	//        ('origin' origin=Pose)?
 	//        'parent' parent=[Link|EString]
 	//        'child' child=[Link|EString]
@@ -3755,6 +3757,11 @@ public class KinematicsGrammarAccess extends AbstractElementFinder.AbstractGramm
 	//terminal DECINT: '0' | ('1'..'9' DIGIT*) | ('-''0'..'9' DIGIT*) ;
 	public TerminalRule getDECINTRule() {
 		return tDECINT;
+	}
+	
+	//terminal JOINTTYPE: 'revolute' | 'continuous' | 'prismatic' | 'fixed' | 'floating' | 'planar';
+	public TerminalRule getJOINTTYPERule() {
+		return tJOINTTYPE;
 	}
 	
 	//Double0 returns type::Double:

@@ -388,7 +388,7 @@ public class KinematicsSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         name=EString 
-	 *         type=EString 
+	 *         type=JOINTTYPE 
 	 *         origin=Pose? 
 	 *         parent=[Link|EString] 
 	 *         child=[Link|EString] 

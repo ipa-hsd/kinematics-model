@@ -458,20 +458,19 @@ ruleJoint returns [EObject current=null]
 		}
 		(
 			(
+				lv_type_5_0=RULE_JOINTTYPE
 				{
-					newCompositeNode(grammarAccess.getJointAccess().getTypeEStringParserRuleCall_5_0());
+					newLeafNode(lv_type_5_0, grammarAccess.getJointAccess().getTypeJOINTTYPETerminalRuleCall_5_0());
 				}
-				lv_type_5_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getJointRule());
+						$current = createModelElement(grammarAccess.getJointRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"type",
 						lv_type_5_0,
-						"de.fraunhofer.ipa.kinematics.Kinematics.EString");
-					afterParserOrEnumRuleCall();
+						"de.fraunhofer.ipa.kinematics.Kinematics.JOINTTYPE");
 				}
 			)
 		)
@@ -4229,6 +4228,8 @@ RULE_BOOLEAN : ('true'|'false');
 RULE_DOUBLE : RULE_DECINT ('.' RULE_DIGIT*|('.' RULE_DIGIT*)? ('E'|'e') ('-'|'+')? RULE_DECINT);
 
 RULE_DECINT : ('0'|'1'..'9' RULE_DIGIT*|'-' '0'..'9' RULE_DIGIT*);
+
+RULE_JOINTTYPE : ('revolute'|'continuous'|'prismatic'|'fixed'|'floating'|'planar');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
