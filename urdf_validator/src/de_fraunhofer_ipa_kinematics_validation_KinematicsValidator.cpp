@@ -1,6 +1,5 @@
-#include "KinematicsValidator.h"
-
 #include <iostream>
+#include "de_fraunhofer_ipa_kinematics_validation_KinematicsValidator.h"
 
 
 using namespace std;

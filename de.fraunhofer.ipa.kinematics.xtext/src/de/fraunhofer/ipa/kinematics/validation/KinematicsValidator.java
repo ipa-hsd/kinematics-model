@@ -3,6 +3,9 @@
  */
 package de.fraunhofer.ipa.kinematics.validation;
 
+import org.eclipse.xtext.validation.Check;
+
+import urdf.RobotType;
 
 /**
  * This class contains custom validation rules. 
@@ -10,16 +13,22 @@ package de.fraunhofer.ipa.kinematics.validation;
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#validation
  */
 public class KinematicsValidator extends AbstractKinematicsValidator {
+
+    private native boolean print();
+
+	public static final String INVALID_NAME = "invalidName";
+
+
+	@Check
+	public void checkUniqueNames(RobotType robot) {
+		if(!print()) {
+			error("JNI test!", null);
+		}
+	}
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					KinematicsPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
-	
+	static {
+
+        System.loadLibrary("urdf_validator");
+
+    }
 }
