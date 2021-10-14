@@ -21,14 +21,12 @@ public class KinematicsValidator extends AbstractKinematicsValidator {
 
 	@Check
 	public void checkUniqueNames(RobotType robot) {
-		if(!print()) {
-			error("JNI test!", null);
+		if(print()) {
+			error("JNI test", null);
 		}
 	}
 	
 	static {
-
         System.loadLibrary("urdf_validator");
-
     }
 }
