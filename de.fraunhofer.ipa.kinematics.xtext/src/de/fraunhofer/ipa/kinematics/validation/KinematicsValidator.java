@@ -3,6 +3,10 @@
  */
 package de.fraunhofer.ipa.kinematics.validation;
 
+import java.util.Arrays;
+import java.util.List;
+import org.eclipse.xtext.validation.Check;
+import urdf.Joint;
 
 /**
  * This class contains custom validation rules. 
@@ -11,15 +15,14 @@ package de.fraunhofer.ipa.kinematics.validation;
  */
 public class KinematicsValidator extends AbstractKinematicsValidator {
 	
-//	public static final String INVALID_NAME = "invalidName";
-//
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					KinematicsPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
+	public static final String INVALID_TYPE = "invalidType";
+
+	@Check
+	public void checkJointType(Joint joint) {
+		List<String> joint_types = Arrays.asList("revolute","continuous","prismatic","fixed","floating","planar");
+		if (!joint_types.contains(joint.getType())) {
+			error("Joint has an invalid type, only the following types are allowed: "+joint_types.toString(), null, INVALID_TYPE);
+		}
+	}
 	
 }
