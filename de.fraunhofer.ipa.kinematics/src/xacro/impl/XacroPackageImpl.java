@@ -11,13 +11,8 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-import urdf.UrdfPackage;
 
 import xacro.Body;
-import xacro.Box;
-import xacro.Collision;
-import xacro.Cylinder;
-import xacro.Geometry;
 import xacro.Inertia;
 import xacro.Inertial;
 import xacro.Joint;
@@ -27,7 +22,6 @@ import xacro.LinkRef;
 import xacro.Macro;
 import xacro.MacroCall;
 import xacro.Mass;
-import xacro.Mesh;
 import xacro.Parameter;
 import xacro.ParameterCall;
 import xacro.ParameterLink;
@@ -40,9 +34,7 @@ import xacro.ParameterType;
 import xacro.ParameterValue;
 import xacro.Pose;
 import xacro.Robot;
-import xacro.Sphere;
 import xacro.Vector3;
-import xacro.Visual;
 import xacro.XacroFactory;
 import xacro.XacroPackage;
 
@@ -128,41 +120,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass visualEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass collisionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass geometryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass boxEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass cylinderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass vector3EClass = null;
 
 	/**
@@ -192,20 +149,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * @generated
 	 */
 	private EClass inertiaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass meshEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sphereEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -312,7 +255,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 
 		// Initialize simple dependencies
 		EcorePackage.eINSTANCE.eClass();
-		UrdfPackage.eINSTANCE.eClass();
 		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -523,8 +465,8 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterCall_Value() {
-		return (EReference)parameterCallEClass.getEStructuralFeatures().get(1);
+	public EReference getParameterCall_Parameter() {
+		return (EReference)parameterCallEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -532,8 +474,8 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getParameterCall_Parameter() {
-		return (EReference)parameterCallEClass.getEStructuralFeatures().get(0);
+	public EReference getParameterCall_Value() {
+		return (EReference)parameterCallEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -586,7 +528,7 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLink_Visual() {
+	public EReference getLink_Inertial() {
 		return (EReference)linkEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -595,26 +537,8 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLink_Collision() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLink_Inertial() {
-		return (EReference)linkEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getLink_Resolved() {
-		return (EAttribute)linkEClass.getEStructuralFeatures().get(4);
+		return (EAttribute)linkEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -703,15 +627,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPose_Xyz() {
-		return (EAttribute)poseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPose_Rpy() {
 		return (EAttribute)poseEClass.getEStructuralFeatures().get(0);
 	}
@@ -721,143 +636,8 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVisual() {
-		return visualEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVisual_Origin() {
-		return (EReference)visualEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVisual_Geometry() {
-		return (EReference)visualEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCollision() {
-		return collisionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCollision_Origin() {
-		return (EReference)collisionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCollision_Geometry() {
-		return (EReference)collisionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGeometry() {
-		return geometryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGeometry_Box() {
-		return (EReference)geometryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGeometry_Cylinder() {
-		return (EReference)geometryEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGeometry_Mesh() {
-		return (EReference)geometryEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGeometry_Sphere() {
-		return (EReference)geometryEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBox() {
-		return boxEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBox_Size() {
-		return (EReference)boxEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCylinder() {
-		return cylinderEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCylinder_Length() {
-		return (EAttribute)cylinderEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCylinder_Radius() {
-		return (EAttribute)cylinderEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPose_Xyz() {
+		return (EAttribute)poseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1038,51 +818,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 	 */
 	public EAttribute getInertia_Izz() {
 		return (EAttribute)inertiaEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMesh() {
-		return meshEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMesh_Filename() {
-		return (EAttribute)meshEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMesh_Scale() {
-		return (EAttribute)meshEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSphere() {
-		return sphereEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSphere_Radius() {
-		return (EAttribute)sphereEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1274,8 +1009,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__NAME);
-		createEReference(linkEClass, LINK__VISUAL);
-		createEReference(linkEClass, LINK__COLLISION);
 		createEReference(linkEClass, LINK__INERTIAL);
 		createEAttribute(linkEClass, LINK__RESOLVED);
 
@@ -1291,27 +1024,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 		poseEClass = createEClass(POSE);
 		createEAttribute(poseEClass, POSE__RPY);
 		createEAttribute(poseEClass, POSE__XYZ);
-
-		visualEClass = createEClass(VISUAL);
-		createEReference(visualEClass, VISUAL__ORIGIN);
-		createEReference(visualEClass, VISUAL__GEOMETRY);
-
-		collisionEClass = createEClass(COLLISION);
-		createEReference(collisionEClass, COLLISION__ORIGIN);
-		createEReference(collisionEClass, COLLISION__GEOMETRY);
-
-		geometryEClass = createEClass(GEOMETRY);
-		createEReference(geometryEClass, GEOMETRY__BOX);
-		createEReference(geometryEClass, GEOMETRY__CYLINDER);
-		createEReference(geometryEClass, GEOMETRY__MESH);
-		createEReference(geometryEClass, GEOMETRY__SPHERE);
-
-		boxEClass = createEClass(BOX);
-		createEReference(boxEClass, BOX__SIZE);
-
-		cylinderEClass = createEClass(CYLINDER);
-		createEAttribute(cylinderEClass, CYLINDER__LENGTH);
-		createEAttribute(cylinderEClass, CYLINDER__RADIUS);
 
 		vector3EClass = createEClass(VECTOR3);
 		createEAttribute(vector3EClass, VECTOR3__XYZ);
@@ -1337,13 +1049,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 		createEAttribute(inertiaEClass, INERTIA__IYY);
 		createEAttribute(inertiaEClass, INERTIA__IYZ);
 		createEAttribute(inertiaEClass, INERTIA__IZZ);
-
-		meshEClass = createEClass(MESH);
-		createEAttribute(meshEClass, MESH__FILENAME);
-		createEAttribute(meshEClass, MESH__SCALE);
-
-		sphereEClass = createEClass(SPHERE);
-		createEAttribute(sphereEClass, SPHERE__RADIUS);
 
 		parameterPoseEClass = createEClass(PARAMETER_POSE);
 		createEReference(parameterPoseEClass, PARAMETER_POSE__REF);
@@ -1442,8 +1147,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLink_Name(), this.getParameterString(), null, "name", null, 1, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLink_Visual(), this.getVisual(), null, "visual", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLink_Collision(), this.getCollision(), null, "collision", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLink_Inertial(), this.getInertial(), null, "inertial", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLink_Resolved(), theXMLTypePackage.getString(), "resolved", null, 0, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1459,27 +1162,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 		initEClass(poseEClass, Pose.class, "Pose", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPose_Rpy(), theXMLTypePackage.getString(), "rpy", null, 1, 1, Pose.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPose_Xyz(), theXMLTypePackage.getString(), "xyz", null, 1, 1, Pose.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(visualEClass, Visual.class, "Visual", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVisual_Origin(), this.getPose(), null, "origin", null, 0, 1, Visual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVisual_Geometry(), this.getGeometry(), null, "geometry", null, 0, 1, Visual.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(collisionEClass, Collision.class, "Collision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCollision_Origin(), this.getPose(), null, "origin", null, 0, 1, Collision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCollision_Geometry(), this.getGeometry(), null, "geometry", null, 0, 1, Collision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(geometryEClass, Geometry.class, "Geometry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeometry_Box(), this.getBox(), null, "box", null, 0, 1, Geometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeometry_Cylinder(), this.getCylinder(), null, "cylinder", null, 0, 1, Geometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeometry_Mesh(), this.getMesh(), null, "mesh", null, 0, 1, Geometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeometry_Sphere(), this.getSphere(), null, "sphere", null, 0, 1, Geometry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(boxEClass, Box.class, "Box", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBox_Size(), this.getParameterString(), null, "size", null, 1, 1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(cylinderEClass, Cylinder.class, "Cylinder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCylinder_Length(), theXMLTypePackage.getDouble(), "length", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCylinder_Radius(), theXMLTypePackage.getDouble(), "radius", null, 1, 1, Cylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vector3EClass, Vector3.class, "Vector3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVector3_Xyz(), theXMLTypePackage.getString(), "xyz", null, 1, 1, Vector3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1505,13 +1187,6 @@ public class XacroPackageImpl extends EPackageImpl implements XacroPackage {
 		initEAttribute(getInertia_Iyy(), theXMLTypePackage.getDouble(), "iyy", null, 0, 1, Inertia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInertia_Iyz(), theXMLTypePackage.getDouble(), "iyz", null, 0, 1, Inertia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInertia_Izz(), theXMLTypePackage.getDouble(), "izz", null, 0, 1, Inertia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(meshEClass, Mesh.class, "Mesh", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMesh_Filename(), theXMLTypePackage.getString(), "filename", null, 1, 1, Mesh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMesh_Scale(), theXMLTypePackage.getDouble(), "scale", null, 0, 1, Mesh.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(sphereEClass, Sphere.class, "Sphere", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSphere_Radius(), theXMLTypePackage.getDouble(), "radius", null, 1, 1, Sphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterPoseEClass, ParameterPose.class, "ParameterPose", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getParameterPose_Ref(), this.getParameter(), null, "ref", null, 0, 1, ParameterPose.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

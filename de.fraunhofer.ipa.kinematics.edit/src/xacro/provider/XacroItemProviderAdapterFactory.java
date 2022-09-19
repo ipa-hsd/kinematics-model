@@ -302,121 +302,6 @@ public class XacroItemProviderAdapterFactory extends XacroAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Visual} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VisualItemProvider visualItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Visual}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVisualAdapter() {
-		if (visualItemProvider == null) {
-			visualItemProvider = new VisualItemProvider(this);
-		}
-
-		return visualItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Collision} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CollisionItemProvider collisionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Collision}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCollisionAdapter() {
-		if (collisionItemProvider == null) {
-			collisionItemProvider = new CollisionItemProvider(this);
-		}
-
-		return collisionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Geometry} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GeometryItemProvider geometryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Geometry}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGeometryAdapter() {
-		if (geometryItemProvider == null) {
-			geometryItemProvider = new GeometryItemProvider(this);
-		}
-
-		return geometryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Box} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BoxItemProvider boxItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Box}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBoxAdapter() {
-		if (boxItemProvider == null) {
-			boxItemProvider = new BoxItemProvider(this);
-		}
-
-		return boxItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Cylinder} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CylinderItemProvider cylinderItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Cylinder}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCylinderAdapter() {
-		if (cylinderItemProvider == null) {
-			cylinderItemProvider = new CylinderItemProvider(this);
-		}
-
-		return cylinderItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link xacro.Vector3} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -529,52 +414,6 @@ public class XacroItemProviderAdapterFactory extends XacroAdapterFactory impleme
 		}
 
 		return inertiaItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Mesh} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MeshItemProvider meshItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Mesh}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMeshAdapter() {
-		if (meshItemProvider == null) {
-			meshItemProvider = new MeshItemProvider(this);
-		}
-
-		return meshItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xacro.Sphere} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SphereItemProvider sphereItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xacro.Sphere}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSphereAdapter() {
-		if (sphereItemProvider == null) {
-			sphereItemProvider = new SphereItemProvider(this);
-		}
-
-		return sphereItemProvider;
 	}
 
 	/**
@@ -870,18 +709,11 @@ public class XacroItemProviderAdapterFactory extends XacroAdapterFactory impleme
 		if (linkItemProvider != null) linkItemProvider.dispose();
 		if (jointItemProvider != null) jointItemProvider.dispose();
 		if (poseItemProvider != null) poseItemProvider.dispose();
-		if (visualItemProvider != null) visualItemProvider.dispose();
-		if (collisionItemProvider != null) collisionItemProvider.dispose();
-		if (geometryItemProvider != null) geometryItemProvider.dispose();
-		if (boxItemProvider != null) boxItemProvider.dispose();
-		if (cylinderItemProvider != null) cylinderItemProvider.dispose();
 		if (vector3ItemProvider != null) vector3ItemProvider.dispose();
 		if (limitItemProvider != null) limitItemProvider.dispose();
 		if (massItemProvider != null) massItemProvider.dispose();
 		if (inertialItemProvider != null) inertialItemProvider.dispose();
 		if (inertiaItemProvider != null) inertiaItemProvider.dispose();
-		if (meshItemProvider != null) meshItemProvider.dispose();
-		if (sphereItemProvider != null) sphereItemProvider.dispose();
 		if (parameterPoseItemProvider != null) parameterPoseItemProvider.dispose();
 		if (parameterValueItemProvider != null) parameterValueItemProvider.dispose();
 		if (parameterLinkItemProvider != null) parameterLinkItemProvider.dispose();

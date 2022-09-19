@@ -230,7 +230,6 @@ public interface XacroPackage extends EPackage {
 	 */
 	int BODY_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link xacro.impl.MacroImpl <em>Macro</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -285,7 +284,6 @@ public interface XacroPackage extends EPackage {
 	 * @ordered
 	 */
 	int MACRO_OPERATION_COUNT = 0;
-
 
 	/**
 	 * The meta object id for the '{@link xacro.impl.MacroCallImpl <em>Macro Call</em>}' class.
@@ -379,17 +377,6 @@ public interface XacroPackage extends EPackage {
 	 */
 	int PARAMETER_CALL_OPERATION_COUNT = 0;
 
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.ParameterValueImpl <em>Parameter Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.ParameterValueImpl
-	 * @see xacro.impl.XacroPackageImpl#getParameterValue()
-	 * @generated
-	 */
-	int PARAMETER_VALUE = 23;
-
 	/**
 	 * The meta object id for the '{@link xacro.impl.ParameterStringImpl <em>Parameter String</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -456,31 +443,13 @@ public interface XacroPackage extends EPackage {
 	int LINK__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Visual</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__VISUAL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Collision</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__COLLISION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Inertial</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__INERTIAL = 3;
+	int LINK__INERTIAL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Resolved</b></em>' attribute.
@@ -489,7 +458,7 @@ public interface XacroPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__RESOLVED = 4;
+	int LINK__RESOLVED = 2;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -498,7 +467,7 @@ public interface XacroPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = 5;
+	int LINK_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -601,6 +570,16 @@ public interface XacroPackage extends EPackage {
 	int JOINT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link xacro.impl.ParameterValueImpl <em>Parameter Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xacro.impl.ParameterValueImpl
+	 * @see xacro.impl.XacroPackageImpl#getParameterValue()
+	 * @generated
+	 */
+	int PARAMETER_VALUE = 16;
+
+	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -683,245 +662,6 @@ public interface XacroPackage extends EPackage {
 	int POSE_OPERATION_COUNT = PARAMETER_VALUE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xacro.impl.VisualImpl <em>Visual</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.VisualImpl
-	 * @see xacro.impl.XacroPackageImpl#getVisual()
-	 * @generated
-	 */
-	int VISUAL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Origin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL__ORIGIN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Geometry</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL__GEOMETRY = 1;
-
-	/**
-	 * The number of structural features of the '<em>Visual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Visual</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VISUAL_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.CollisionImpl <em>Collision</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.CollisionImpl
-	 * @see xacro.impl.XacroPackageImpl#getCollision()
-	 * @generated
-	 */
-	int COLLISION = 11;
-
-	/**
-	 * The feature id for the '<em><b>Origin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLISION__ORIGIN = 0;
-
-	/**
-	 * The feature id for the '<em><b>Geometry</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLISION__GEOMETRY = 1;
-
-	/**
-	 * The number of structural features of the '<em>Collision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLISION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Collision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COLLISION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.GeometryImpl <em>Geometry</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.GeometryImpl
-	 * @see xacro.impl.XacroPackageImpl#getGeometry()
-	 * @generated
-	 */
-	int GEOMETRY = 12;
-
-	/**
-	 * The feature id for the '<em><b>Box</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY__BOX = 0;
-
-	/**
-	 * The feature id for the '<em><b>Cylinder</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY__CYLINDER = 1;
-
-	/**
-	 * The feature id for the '<em><b>Mesh</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY__MESH = 2;
-
-	/**
-	 * The feature id for the '<em><b>Sphere</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY__SPHERE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Geometry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Geometry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEOMETRY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.BoxImpl <em>Box</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.BoxImpl
-	 * @see xacro.impl.XacroPackageImpl#getBox()
-	 * @generated
-	 */
-	int BOX = 13;
-
-	/**
-	 * The feature id for the '<em><b>Size</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOX__SIZE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Box</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOX_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Box</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOX_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.CylinderImpl <em>Cylinder</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.CylinderImpl
-	 * @see xacro.impl.XacroPackageImpl#getCylinder()
-	 * @generated
-	 */
-	int CYLINDER = 14;
-
-	/**
-	 * The feature id for the '<em><b>Length</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CYLINDER__LENGTH = 0;
-
-	/**
-	 * The feature id for the '<em><b>Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CYLINDER__RADIUS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Cylinder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CYLINDER_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Cylinder</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CYLINDER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link xacro.impl.Vector3Impl <em>Vector3</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -929,7 +669,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getVector3()
 	 * @generated
 	 */
-	int VECTOR3 = 15;
+	int VECTOR3 = 10;
 
 	/**
 	 * The feature id for the '<em><b>Xyz</b></em>' attribute.
@@ -966,7 +706,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getLimit()
 	 * @generated
 	 */
-	int LIMIT = 16;
+	int LIMIT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Lower</b></em>' attribute.
@@ -1030,7 +770,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getMass()
 	 * @generated
 	 */
-	int MASS = 17;
+	int MASS = 12;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1067,7 +807,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getInertial()
 	 * @generated
 	 */
-	int INERTIAL = 18;
+	int INERTIAL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Mass</b></em>' containment reference.
@@ -1122,7 +862,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getInertia()
 	 * @generated
 	 */
-	int INERTIA = 19;
+	int INERTIA = 14;
 
 	/**
 	 * The feature id for the '<em><b>Ixx</b></em>' attribute.
@@ -1197,89 +937,6 @@ public interface XacroPackage extends EPackage {
 	int INERTIA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link xacro.impl.MeshImpl <em>Mesh</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.MeshImpl
-	 * @see xacro.impl.XacroPackageImpl#getMesh()
-	 * @generated
-	 */
-	int MESH = 20;
-
-	/**
-	 * The feature id for the '<em><b>Filename</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESH__FILENAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Scale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESH__SCALE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Mesh</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESH_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Mesh</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MESH_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link xacro.impl.SphereImpl <em>Sphere</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xacro.impl.SphereImpl
-	 * @see xacro.impl.XacroPackageImpl#getSphere()
-	 * @generated
-	 */
-	int SPHERE = 21;
-
-	/**
-	 * The feature id for the '<em><b>Radius</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPHERE__RADIUS = 0;
-
-	/**
-	 * The number of structural features of the '<em>Sphere</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPHERE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Sphere</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPHERE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link xacro.impl.ParameterPoseImpl <em>Parameter Pose</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1287,7 +944,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterPose()
 	 * @generated
 	 */
-	int PARAMETER_POSE = 22;
+	int PARAMETER_POSE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -1333,7 +990,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterLink()
 	 * @generated
 	 */
-	int PARAMETER_LINK = 24;
+	int PARAMETER_LINK = 17;
 
 	/**
 	 * The feature id for the '<em><b>Param</b></em>' reference.
@@ -1379,7 +1036,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getLinkRef()
 	 * @generated
 	 */
-	int LINK_REF = 25;
+	int LINK_REF = 18;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1425,7 +1082,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterType()
 	 * @generated
 	 */
-	int PARAMETER_TYPE = 26;
+	int PARAMETER_TYPE = 19;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Type</em>' class.
@@ -1453,7 +1110,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterPoseType()
 	 * @generated
 	 */
-	int PARAMETER_POSE_TYPE = 27;
+	int PARAMETER_POSE_TYPE = 20;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Pose Type</em>' class.
@@ -1481,7 +1138,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterStringType()
 	 * @generated
 	 */
-	int PARAMETER_STRING_TYPE = 28;
+	int PARAMETER_STRING_TYPE = 21;
 
 	/**
 	 * The number of structural features of the '<em>Parameter String Type</em>' class.
@@ -1509,7 +1166,7 @@ public interface XacroPackage extends EPackage {
 	 * @see xacro.impl.XacroPackageImpl#getParameterLinkRefType()
 	 * @generated
 	 */
-	int PARAMETER_LINK_REF_TYPE = 29;
+	int PARAMETER_LINK_REF_TYPE = 22;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Link Ref Type</em>' class.
@@ -1528,6 +1185,7 @@ public interface XacroPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETER_LINK_REF_TYPE_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link xacro.Robot <em>Robot</em>}'.
@@ -1755,17 +1413,6 @@ public interface XacroPackage extends EPackage {
 	EClass getParameterCall();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link xacro.ParameterCall#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Value</em>'.
-	 * @see xacro.ParameterCall#getValue()
-	 * @see #getParameterCall()
-	 * @generated
-	 */
-	EReference getParameterCall_Value();
-
-	/**
 	 * Returns the meta object for the reference '{@link xacro.ParameterCall#getParameter <em>Parameter</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1775,6 +1422,17 @@ public interface XacroPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getParameterCall_Parameter();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link xacro.ParameterCall#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see xacro.ParameterCall#getValue()
+	 * @see #getParameterCall()
+	 * @generated
+	 */
+	EReference getParameterCall_Value();
 
 	/**
 	 * Returns the meta object for class '{@link xacro.ParameterString <em>Parameter String</em>}'.
@@ -1828,28 +1486,6 @@ public interface XacroPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLink_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Link#getVisual <em>Visual</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Visual</em>'.
-	 * @see xacro.Link#getVisual()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EReference getLink_Visual();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Link#getCollision <em>Collision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Collision</em>'.
-	 * @see xacro.Link#getCollision()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EReference getLink_Collision();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link xacro.Link#getInertial <em>Inertial</em>}'.
@@ -1971,17 +1607,6 @@ public interface XacroPackage extends EPackage {
 	EClass getPose();
 
 	/**
-	 * Returns the meta object for the attribute '{@link xacro.Pose#getXyz <em>Xyz</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Xyz</em>'.
-	 * @see xacro.Pose#getXyz()
-	 * @see #getPose()
-	 * @generated
-	 */
-	EAttribute getPose_Xyz();
-
-	/**
 	 * Returns the meta object for the attribute '{@link xacro.Pose#getRpy <em>Rpy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1993,175 +1618,15 @@ public interface XacroPackage extends EPackage {
 	EAttribute getPose_Rpy();
 
 	/**
-	 * Returns the meta object for class '{@link xacro.Visual <em>Visual</em>}'.
+	 * Returns the meta object for the attribute '{@link xacro.Pose#getXyz <em>Xyz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Visual</em>'.
-	 * @see xacro.Visual
+	 * @return the meta object for the attribute '<em>Xyz</em>'.
+	 * @see xacro.Pose#getXyz()
+	 * @see #getPose()
 	 * @generated
 	 */
-	EClass getVisual();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Visual#getOrigin <em>Origin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Origin</em>'.
-	 * @see xacro.Visual#getOrigin()
-	 * @see #getVisual()
-	 * @generated
-	 */
-	EReference getVisual_Origin();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Visual#getGeometry <em>Geometry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Geometry</em>'.
-	 * @see xacro.Visual#getGeometry()
-	 * @see #getVisual()
-	 * @generated
-	 */
-	EReference getVisual_Geometry();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Collision <em>Collision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Collision</em>'.
-	 * @see xacro.Collision
-	 * @generated
-	 */
-	EClass getCollision();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Collision#getOrigin <em>Origin</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Origin</em>'.
-	 * @see xacro.Collision#getOrigin()
-	 * @see #getCollision()
-	 * @generated
-	 */
-	EReference getCollision_Origin();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Collision#getGeometry <em>Geometry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Geometry</em>'.
-	 * @see xacro.Collision#getGeometry()
-	 * @see #getCollision()
-	 * @generated
-	 */
-	EReference getCollision_Geometry();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Geometry <em>Geometry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Geometry</em>'.
-	 * @see xacro.Geometry
-	 * @generated
-	 */
-	EClass getGeometry();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Geometry#getBox <em>Box</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Box</em>'.
-	 * @see xacro.Geometry#getBox()
-	 * @see #getGeometry()
-	 * @generated
-	 */
-	EReference getGeometry_Box();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Geometry#getCylinder <em>Cylinder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Cylinder</em>'.
-	 * @see xacro.Geometry#getCylinder()
-	 * @see #getGeometry()
-	 * @generated
-	 */
-	EReference getGeometry_Cylinder();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Geometry#getMesh <em>Mesh</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mesh</em>'.
-	 * @see xacro.Geometry#getMesh()
-	 * @see #getGeometry()
-	 * @generated
-	 */
-	EReference getGeometry_Mesh();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Geometry#getSphere <em>Sphere</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sphere</em>'.
-	 * @see xacro.Geometry#getSphere()
-	 * @see #getGeometry()
-	 * @generated
-	 */
-	EReference getGeometry_Sphere();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Box <em>Box</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Box</em>'.
-	 * @see xacro.Box
-	 * @generated
-	 */
-	EClass getBox();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link xacro.Box#getSize <em>Size</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Size</em>'.
-	 * @see xacro.Box#getSize()
-	 * @see #getBox()
-	 * @generated
-	 */
-	EReference getBox_Size();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Cylinder <em>Cylinder</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Cylinder</em>'.
-	 * @see xacro.Cylinder
-	 * @generated
-	 */
-	EClass getCylinder();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xacro.Cylinder#getLength <em>Length</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Length</em>'.
-	 * @see xacro.Cylinder#getLength()
-	 * @see #getCylinder()
-	 * @generated
-	 */
-	EAttribute getCylinder_Length();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xacro.Cylinder#getRadius <em>Radius</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see xacro.Cylinder#getRadius()
-	 * @see #getCylinder()
-	 * @generated
-	 */
-	EAttribute getCylinder_Radius();
+	EAttribute getPose_Xyz();
 
 	/**
 	 * Returns the meta object for class '{@link xacro.Vector3 <em>Vector3</em>}'.
@@ -2377,59 +1842,6 @@ public interface XacroPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInertia_Izz();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Mesh <em>Mesh</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Mesh</em>'.
-	 * @see xacro.Mesh
-	 * @generated
-	 */
-	EClass getMesh();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xacro.Mesh#getFilename <em>Filename</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Filename</em>'.
-	 * @see xacro.Mesh#getFilename()
-	 * @see #getMesh()
-	 * @generated
-	 */
-	EAttribute getMesh_Filename();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xacro.Mesh#getScale <em>Scale</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Scale</em>'.
-	 * @see xacro.Mesh#getScale()
-	 * @see #getMesh()
-	 * @generated
-	 */
-	EAttribute getMesh_Scale();
-
-	/**
-	 * Returns the meta object for class '{@link xacro.Sphere <em>Sphere</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sphere</em>'.
-	 * @see xacro.Sphere
-	 * @generated
-	 */
-	EClass getSphere();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xacro.Sphere#getRadius <em>Radius</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Radius</em>'.
-	 * @see xacro.Sphere#getRadius()
-	 * @see #getSphere()
-	 * @generated
-	 */
-	EAttribute getSphere_Radius();
 
 	/**
 	 * Returns the meta object for class '{@link xacro.ParameterPose <em>Parameter Pose</em>}'.
@@ -2781,20 +2193,20 @@ public interface XacroPackage extends EPackage {
 		EClass PARAMETER_CALL = eINSTANCE.getParameterCall();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PARAMETER_CALL__VALUE = eINSTANCE.getParameterCall_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Parameter</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PARAMETER_CALL__PARAMETER = eINSTANCE.getParameterCall_Parameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER_CALL__VALUE = eINSTANCE.getParameterCall_Value();
 
 		/**
 		 * The meta object literal for the '{@link xacro.impl.ParameterStringImpl <em>Parameter String</em>}' class.
@@ -2839,22 +2251,6 @@ public interface XacroPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINK__NAME = eINSTANCE.getLink_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Visual</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LINK__VISUAL = eINSTANCE.getLink_Visual();
-
-		/**
-		 * The meta object literal for the '<em><b>Collision</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LINK__COLLISION = eINSTANCE.getLink_Collision();
 
 		/**
 		 * The meta object literal for the '<em><b>Inertial</b></em>' containment reference feature.
@@ -2949,14 +2345,6 @@ public interface XacroPackage extends EPackage {
 		EClass POSE = eINSTANCE.getPose();
 
 		/**
-		 * The meta object literal for the '<em><b>Xyz</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute POSE__XYZ = eINSTANCE.getPose_Xyz();
-
-		/**
 		 * The meta object literal for the '<em><b>Rpy</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2965,142 +2353,12 @@ public interface XacroPackage extends EPackage {
 		EAttribute POSE__RPY = eINSTANCE.getPose_Rpy();
 
 		/**
-		 * The meta object literal for the '{@link xacro.impl.VisualImpl <em>Visual</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.VisualImpl
-		 * @see xacro.impl.XacroPackageImpl#getVisual()
-		 * @generated
-		 */
-		EClass VISUAL = eINSTANCE.getVisual();
-
-		/**
-		 * The meta object literal for the '<em><b>Origin</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Xyz</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VISUAL__ORIGIN = eINSTANCE.getVisual_Origin();
-
-		/**
-		 * The meta object literal for the '<em><b>Geometry</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VISUAL__GEOMETRY = eINSTANCE.getVisual_Geometry();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.CollisionImpl <em>Collision</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.CollisionImpl
-		 * @see xacro.impl.XacroPackageImpl#getCollision()
-		 * @generated
-		 */
-		EClass COLLISION = eINSTANCE.getCollision();
-
-		/**
-		 * The meta object literal for the '<em><b>Origin</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLISION__ORIGIN = eINSTANCE.getCollision_Origin();
-
-		/**
-		 * The meta object literal for the '<em><b>Geometry</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COLLISION__GEOMETRY = eINSTANCE.getCollision_Geometry();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.GeometryImpl <em>Geometry</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.GeometryImpl
-		 * @see xacro.impl.XacroPackageImpl#getGeometry()
-		 * @generated
-		 */
-		EClass GEOMETRY = eINSTANCE.getGeometry();
-
-		/**
-		 * The meta object literal for the '<em><b>Box</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOMETRY__BOX = eINSTANCE.getGeometry_Box();
-
-		/**
-		 * The meta object literal for the '<em><b>Cylinder</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOMETRY__CYLINDER = eINSTANCE.getGeometry_Cylinder();
-
-		/**
-		 * The meta object literal for the '<em><b>Mesh</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOMETRY__MESH = eINSTANCE.getGeometry_Mesh();
-
-		/**
-		 * The meta object literal for the '<em><b>Sphere</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEOMETRY__SPHERE = eINSTANCE.getGeometry_Sphere();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.BoxImpl <em>Box</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.BoxImpl
-		 * @see xacro.impl.XacroPackageImpl#getBox()
-		 * @generated
-		 */
-		EClass BOX = eINSTANCE.getBox();
-
-		/**
-		 * The meta object literal for the '<em><b>Size</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOX__SIZE = eINSTANCE.getBox_Size();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.CylinderImpl <em>Cylinder</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.CylinderImpl
-		 * @see xacro.impl.XacroPackageImpl#getCylinder()
-		 * @generated
-		 */
-		EClass CYLINDER = eINSTANCE.getCylinder();
-
-		/**
-		 * The meta object literal for the '<em><b>Length</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CYLINDER__LENGTH = eINSTANCE.getCylinder_Length();
-
-		/**
-		 * The meta object literal for the '<em><b>Radius</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CYLINDER__RADIUS = eINSTANCE.getCylinder_Radius();
+		EAttribute POSE__XYZ = eINSTANCE.getPose_Xyz();
 
 		/**
 		 * The meta object literal for the '{@link xacro.impl.Vector3Impl <em>Vector3</em>}' class.
@@ -3271,50 +2529,6 @@ public interface XacroPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INERTIA__IZZ = eINSTANCE.getInertia_Izz();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.MeshImpl <em>Mesh</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.MeshImpl
-		 * @see xacro.impl.XacroPackageImpl#getMesh()
-		 * @generated
-		 */
-		EClass MESH = eINSTANCE.getMesh();
-
-		/**
-		 * The meta object literal for the '<em><b>Filename</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MESH__FILENAME = eINSTANCE.getMesh_Filename();
-
-		/**
-		 * The meta object literal for the '<em><b>Scale</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MESH__SCALE = eINSTANCE.getMesh_Scale();
-
-		/**
-		 * The meta object literal for the '{@link xacro.impl.SphereImpl <em>Sphere</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xacro.impl.SphereImpl
-		 * @see xacro.impl.XacroPackageImpl#getSphere()
-		 * @generated
-		 */
-		EClass SPHERE = eINSTANCE.getSphere();
-
-		/**
-		 * The meta object literal for the '<em><b>Radius</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SPHERE__RADIUS = eINSTANCE.getSphere_Radius();
 
 		/**
 		 * The meta object literal for the '{@link xacro.impl.ParameterPoseImpl <em>Parameter Pose</em>}' class.

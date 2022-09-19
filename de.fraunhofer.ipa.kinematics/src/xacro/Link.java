@@ -14,8 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link xacro.Link#getName <em>Name</em>}</li>
- *   <li>{@link xacro.Link#getVisual <em>Visual</em>}</li>
- *   <li>{@link xacro.Link#getCollision <em>Collision</em>}</li>
  *   <li>{@link xacro.Link#getInertial <em>Inertial</em>}</li>
  *   <li>{@link xacro.Link#getResolved <em>Resolved</em>}</li>
  * </ul>
@@ -46,50 +44,6 @@ public interface Link extends EObject {
 	 * @generated
 	 */
 	void setName(ParameterString value);
-
-	/**
-	 * Returns the value of the '<em><b>Visual</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visual</em>' containment reference.
-	 * @see #setVisual(Visual)
-	 * @see xacro.XacroPackage#getLink_Visual()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Visual getVisual();
-
-	/**
-	 * Sets the value of the '{@link xacro.Link#getVisual <em>Visual</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visual</em>' containment reference.
-	 * @see #getVisual()
-	 * @generated
-	 */
-	void setVisual(Visual value);
-
-	/**
-	 * Returns the value of the '<em><b>Collision</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Collision</em>' containment reference.
-	 * @see #setCollision(Collision)
-	 * @see xacro.XacroPackage#getLink_Collision()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Collision getCollision();
-
-	/**
-	 * Sets the value of the '{@link xacro.Link#getCollision <em>Collision</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Collision</em>' containment reference.
-	 * @see #getCollision()
-	 * @generated
-	 */
-	void setCollision(Collision value);
 
 	/**
 	 * Returns the value of the '<em><b>Inertial</b></em>' containment reference.

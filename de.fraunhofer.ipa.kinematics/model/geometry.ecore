@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="geometry" nsURI="http://www.ipa.fraunhofer.de/geometry" nsPrefix="geometry">
+  <eClassifiers xsi:type="ecore:EClass" name="LinkGeometry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visual" eType="#//Visual"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collision" eType="#//Collision"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" lowerBound="1" eType="ecore:EClass xacro.ecore#//Link"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Box">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Geometry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="box" eType="#//Box" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cylinder" eType="#//Cylinder"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mesh" eType="#//Mesh" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sphere" eType="#//Sphere"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Visual">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="ecore:EClass xacro.ecore#//Pose"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#//Geometry"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Collision">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="origin" eType="ecore:EClass xacro.ecore#//Pose"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#//Geometry"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mesh">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scale" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cylinder">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sphere">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Double"/>
+  </eClassifiers>
+</ecore:EPackage>

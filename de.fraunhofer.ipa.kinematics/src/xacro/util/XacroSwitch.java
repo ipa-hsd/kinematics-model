@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
+
 import xacro.*;
 
 /**
@@ -126,36 +127,6 @@ public class XacroSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case XacroPackage.VISUAL: {
-				Visual visual = (Visual)theEObject;
-				T result = caseVisual(visual);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.COLLISION: {
-				Collision collision = (Collision)theEObject;
-				T result = caseCollision(collision);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.GEOMETRY: {
-				Geometry geometry = (Geometry)theEObject;
-				T result = caseGeometry(geometry);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.BOX: {
-				Box box = (Box)theEObject;
-				T result = caseBox(box);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.CYLINDER: {
-				Cylinder cylinder = (Cylinder)theEObject;
-				T result = caseCylinder(cylinder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case XacroPackage.VECTOR3: {
 				Vector3 vector3 = (Vector3)theEObject;
 				T result = caseVector3(vector3);
@@ -183,18 +154,6 @@ public class XacroSwitch<T> extends Switch<T> {
 			case XacroPackage.INERTIA: {
 				Inertia inertia = (Inertia)theEObject;
 				T result = caseInertia(inertia);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.MESH: {
-				Mesh mesh = (Mesh)theEObject;
-				T result = caseMesh(mesh);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XacroPackage.SPHERE: {
-				Sphere sphere = (Sphere)theEObject;
-				T result = caseSphere(sphere);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -405,81 +364,6 @@ public class XacroSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Visual</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Visual</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVisual(Visual object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Collision</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Collision</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCollision(Collision object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Geometry</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Geometry</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseGeometry(Geometry object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Box</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Box</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBox(Box object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Cylinder</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Cylinder</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCylinder(Cylinder object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Vector3</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -551,36 +435,6 @@ public class XacroSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInertia(Inertia object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Mesh</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Mesh</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMesh(Mesh object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sphere</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sphere</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSphere(Sphere object) {
 		return null;
 	}
 

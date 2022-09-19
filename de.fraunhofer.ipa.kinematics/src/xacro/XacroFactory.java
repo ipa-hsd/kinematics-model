@@ -112,51 +112,6 @@ public interface XacroFactory extends EFactory {
 	Pose createPose();
 
 	/**
-	 * Returns a new object of class '<em>Visual</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Visual</em>'.
-	 * @generated
-	 */
-	Visual createVisual();
-
-	/**
-	 * Returns a new object of class '<em>Collision</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Collision</em>'.
-	 * @generated
-	 */
-	Collision createCollision();
-
-	/**
-	 * Returns a new object of class '<em>Geometry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Geometry</em>'.
-	 * @generated
-	 */
-	Geometry createGeometry();
-
-	/**
-	 * Returns a new object of class '<em>Box</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Box</em>'.
-	 * @generated
-	 */
-	Box createBox();
-
-	/**
-	 * Returns a new object of class '<em>Cylinder</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Cylinder</em>'.
-	 * @generated
-	 */
-	Cylinder createCylinder();
-
-	/**
 	 * Returns a new object of class '<em>Vector3</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -200,24 +155,6 @@ public interface XacroFactory extends EFactory {
 	 * @generated
 	 */
 	Inertia createInertia();
-
-	/**
-	 * Returns a new object of class '<em>Mesh</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Mesh</em>'.
-	 * @generated
-	 */
-	Mesh createMesh();
-
-	/**
-	 * Returns a new object of class '<em>Sphere</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sphere</em>'.
-	 * @generated
-	 */
-	Sphere createSphere();
 
 	/**
 	 * Returns a new object of class '<em>Parameter Pose</em>'.

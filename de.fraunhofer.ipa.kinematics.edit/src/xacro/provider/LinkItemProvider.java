@@ -103,8 +103,6 @@ public class LinkItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(XacroPackage.Literals.LINK__NAME);
-			childrenFeatures.add(XacroPackage.Literals.LINK__VISUAL);
-			childrenFeatures.add(XacroPackage.Literals.LINK__COLLISION);
 			childrenFeatures.add(XacroPackage.Literals.LINK__INERTIAL);
 		}
 		return childrenFeatures;
@@ -165,8 +163,6 @@ public class LinkItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case XacroPackage.LINK__NAME:
-			case XacroPackage.LINK__VISUAL:
-			case XacroPackage.LINK__COLLISION:
 			case XacroPackage.LINK__INERTIAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -189,16 +185,6 @@ public class LinkItemProvider
 			(createChildParameter
 				(XacroPackage.Literals.LINK__NAME,
 				 XacroFactory.eINSTANCE.createParameterString()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(XacroPackage.Literals.LINK__VISUAL,
-				 XacroFactory.eINSTANCE.createVisual()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(XacroPackage.Literals.LINK__COLLISION,
-				 XacroFactory.eINSTANCE.createCollision()));
 
 		newChildDescriptors.add
 			(createChildParameter

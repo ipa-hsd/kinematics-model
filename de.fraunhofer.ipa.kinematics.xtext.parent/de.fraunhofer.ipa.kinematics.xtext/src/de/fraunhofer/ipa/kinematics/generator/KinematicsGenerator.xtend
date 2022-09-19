@@ -52,46 +52,6 @@ class KinematicsGenerator extends AbstractGenerator {
 
 	private def compile_link(Link link)'''
 <link name="«compile_parameter_string(link.name, false)»" >
-	«IF link.visual !== null»
-	<visual>
-		«IF link.visual.origin !== null»
-		<origin xyz="«link.visual.origin.xyz»" rpy="«link.visual.origin.rpy»" />"
-		«ENDIF»
-		«IF link.visual.geometry !== null»
-		<geometry>
-			«IF link.visual.geometry.mesh !== null»
-			<mesh filename="«link.visual.geometry.mesh.filename»" />
-			«ENDIF»
-			«IF link.visual.geometry.box !== null»
-			<box size="«link.visual.geometry.box.size»" />
-			«ENDIF»
-			«IF link.visual.geometry.cylinder !== null»
-			<cylinder length="«link.visual.geometry.cylinder.length»" radius"«link.visual.geometry.cylinder.radius»"/>
-			«ENDIF»
-		</geometry>
-		«ENDIF»
-	</visual>
-	«ENDIF»
-	«IF link.collision !== null»
-	<collision>
-		«IF link.collision.origin !== null»
-		<origin xyz="«link.collision.origin.xyz»" rpy="«link.collision.origin.rpy»" />"
-		«ENDIF»
-		«IF link.collision.geometry !== null»
-		<geometry>
-			«IF link.collision.geometry.mesh !== null»
-			<mesh filename="«link.collision.geometry.mesh.filename»" />
-			«ENDIF»
-			«IF link.collision.geometry.box !== null»
-			<box size="«link.collision.geometry.box.size»" />
-			«ENDIF»
-			«IF link.collision.geometry.cylinder !== null»
-			<cylinder length="«link.collision.geometry.cylinder.length»" radius"«link.collision.geometry.cylinder.radius»"/>
-			«ENDIF»
-		</geometry>
-		«ENDIF»
-	</collision>
-	«ENDIF»
 	«IF link.inertial !== null»
 	<inertial>
 		«IF link.inertial.mass !== null»

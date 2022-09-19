@@ -239,14 +239,6 @@ ruleLink:
 		'inertial'
 		ruleInertial
 	)?
-	(
-		'visual'
-		ruleVisual
-	)?
-	(
-		'collision'
-		ruleCollision
-	)?
 	'}'
 ;
 
@@ -318,32 +310,6 @@ ruleInertial:
 	'}'
 ;
 
-// Rule Visual
-ruleVisual:
-	'Visual'
-	'{'
-	(
-		'origin'
-		rulePose
-	)?
-	'geometry'
-	ruleGeometry
-	'}'
-;
-
-// Rule Collision
-ruleCollision:
-	'Collision'
-	'{'
-	(
-		'origin'
-		rulePose
-	)?
-	'geometry'
-	ruleGeometry
-	'}'
-;
-
 // Rule Mass
 ruleMass:
 	'Mass'
@@ -381,73 +347,6 @@ ruleInertia:
 	)?
 	(
 		'izz'
-		ruleDouble0
-	)?
-	'}'
-;
-
-// Rule Geometry
-ruleGeometry:
-	'Geometry'
-	'{'
-	(
-		'box'
-		ruleBox
-	)?
-	(
-		'cylinder'
-		ruleCylinder
-	)?
-	(
-		'sphere'
-		ruleSphere
-	)?
-	(
-		'mesh'
-		ruleMesh
-	)?
-	'}'
-;
-
-// Rule Box
-ruleBox:
-	'Box'
-	'{'
-	(
-		'size'
-		ruleParameterString
-	)?
-	'}'
-;
-
-// Rule Cylinder
-ruleCylinder:
-	'Cylinder'
-	'{'
-	'length'
-	ruleDouble0
-	'radius'
-	ruleDouble0
-	'}'
-;
-
-// Rule Sphere
-ruleSphere:
-	'Sphere'
-	'{'
-	'radius'
-	ruleDouble0
-	'}'
-;
-
-// Rule Mesh
-ruleMesh:
-	'Mesh'
-	'{'
-	'filename'
-	RULE_STRING
-	(
-		'scale'
 		ruleDouble0
 	)?
 	'}'
