@@ -7,58 +7,58 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated urdf -->
+      <!-- @generated kinematics -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="urdf.presentation.UrdfModelWizardID"
-            name="%_UI_UrdfModelWizard_label"
-            class="urdf.presentation.UrdfModelWizard"
+            id="kinematics.presentation.KinematicsModelWizardID"
+            name="%_UI_KinematicsModelWizard_label"
+            class="kinematics.presentation.KinematicsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/UrdfModelFile.gif">
-         <description>%_UI_UrdfModelWizard_description</description>
+            icon="icons/full/obj16/KinematicsModelFile.gif">
+         <description>%_UI_KinematicsModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated urdf -->
+      <!-- @generated kinematics -->
       <editor
-            id="urdf.presentation.UrdfEditorID"
-            name="%_UI_UrdfEditor_label"
-            icon="icons/full/obj16/UrdfModelFile.gif"
-            extensions="urdf"
-            class="urdf.presentation.UrdfEditor"
-            contributorClass="urdf.presentation.UrdfActionBarContributor">
+            id="kinematics.presentation.KinematicsEditorID"
+            name="%_UI_KinematicsEditor_label"
+            icon="icons/full/obj16/KinematicsModelFile.gif"
+            extensions="kinematics"
+            class="kinematics.presentation.KinematicsEditor"
+            contributorClass="kinematics.presentation.KinematicsActionBarContributor">
       </editor>
    </extension>
 
    <extension point="org.eclipse.ui.newWizards">
-      <!-- @generated xacro -->
+      <!-- @generated composition -->
       <category
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="xacro.presentation.XacroModelWizardID"
-            name="%_UI_XacroModelWizard_label"
-            class="xacro.presentation.XacroModelWizard"
+            id="composition.presentation.CompositionModelWizardID"
+            name="%_UI_CompositionModelWizard_label"
+            class="composition.presentation.CompositionModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/XacroModelFile.gif">
-         <description>%_UI_XacroModelWizard_description</description>
+            icon="icons/full/obj16/CompositionModelFile.gif">
+         <description>%_UI_CompositionModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated xacro -->
+      <!-- @generated composition -->
       <editor
-            id="xacro.presentation.XacroEditorID"
-            name="%_UI_XacroEditor_label"
-            icon="icons/full/obj16/XacroModelFile.gif"
-            extensions="xacro"
-            class="xacro.presentation.XacroEditor"
-            contributorClass="xacro.presentation.XacroActionBarContributor">
+            id="composition.presentation.CompositionEditorID"
+            name="%_UI_CompositionEditor_label"
+            icon="icons/full/obj16/CompositionModelFile.gif"
+            extensions="composition"
+            class="composition.presentation.CompositionEditor"
+            contributorClass="composition.presentation.CompositionActionBarContributor">
       </editor>
    </extension>
 </plugin>

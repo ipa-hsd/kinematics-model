@@ -26,7 +26,29 @@
       <package
             uri="http://www.ipa.fraunhofer.de/xacro"
             class="xacro.XacroPackage"
-            genModel="model/xacro.genmodel"/>
+            genModel="model/composition.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated kinematics -->
+      <package
+            uri="http://www.ipa.fraunhofer.de/kinematics"
+            class="kinematics.KinematicsPackage"
+            genModel="model/kinematics.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated composition -->
+      <package
+            uri="http://www.ipa.fraunhofer.de/composition"
+            class="composition.CompositionPackage"
+            genModel="model/composition.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated composition -->
+      <parser
+            type="composition"
+            class="composition.util.CompositionResourceFactoryImpl"/>
+   </extension>
 </plugin>
