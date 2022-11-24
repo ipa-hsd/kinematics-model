@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.fraunhofer.ipa.composition.xtext
+Bundle-ManifestVersion: 2
+Bundle-Name: de.fraunhofer.ipa.composition.xtext
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.fraunhofer.ipa.composition.xtext; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.fraunhofer.ipa.kinematics,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ de.fraunhofer.ipa.kinematics.xtext;bundle-version="1.0.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: de.fraunhofer.ipa.composition,
+ de.fraunhofer.ipa.composition.serializer,
+ de.fraunhofer.ipa.composition.validation,
+ de.fraunhofer.ipa.composition.generator,
+ de.fraunhofer.ipa.composition.services,
+ de.fraunhofer.ipa.composition.scoping,
+ de.fraunhofer.ipa.composition.formatting2,
+ de.fraunhofer.ipa.composition.parser.antlr.internal,
+ de.fraunhofer.ipa.composition.parser.antlr
+Import-Package: org.apache.log4j

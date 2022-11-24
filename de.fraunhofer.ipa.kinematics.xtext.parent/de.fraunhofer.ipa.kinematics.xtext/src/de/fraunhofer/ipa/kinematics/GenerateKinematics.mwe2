@@ -32,8 +32,8 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "de.fraunhofer.ipa.kinematics.Kinematics"
-			fileExtensions = "kin"
-			referencedResource = "platform:/resource/de.fraunhofer.ipa.kinematics/model/xacro.genmodel"
+			fileExtensions = "kinematics"
+			referencedResource = "platform:/resource/de.fraunhofer.ipa.kinematics/model/kinematics.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
@@ -55,10 +55,6 @@ Workflow {
 			}
 			junitSupport = {
 				junitVersion = "5"
-			}
-
-			parserGenerator = {
-				debugGrammar = true
 			}
 		}
 	}

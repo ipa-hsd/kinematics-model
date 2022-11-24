@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: de.fraunhofer.ipa.composition.xtext.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: de.fraunhofer.ipa.composition.xtext.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: de.fraunhofer.ipa.composition.xtext.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: de.fraunhofer.ipa.composition.xtext,
+ de.fraunhofer.ipa.composition.xtext.ide,
+ de.fraunhofer.ipa.kinematics,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ de.fraunhofer.ipa.kinematics.xtext;bundle-version="1.0.0",
+ de.fraunhofer.ipa.kinematics.xtext.ui
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: de.fraunhofer.ipa.composition.ui.contentassist,
+ de.fraunhofer.ipa.composition.ui.quickfix,
+ de.fraunhofer.ipa.composition.xtext.ui.internal
+Bundle-Activator: de.fraunhofer.ipa.composition.xtext.ui.internal.XtextActivator
